@@ -52,7 +52,7 @@
             bindings = <
 &kp EQUAL  &kp N1              &kp N2          &kp N3              &kp N4     &kp N5  &tog 1                                                &mo 3      &kp N6  &kp N7  &kp N8              &kp N9           &kp N0                  &kp MINUS
 &kp TAB    &kp Q               &kp W           &kp E               &kp R      &kp T   &none                                                 &none      &kp Y   &kp U   &kp I               &kp O            &kp P                   &kp BSLH
-&kp ESC    &hm A LEFT_CONTROL  &hm S LEFT_ALT  &hm D LEFT_COMMAND  &kp F      &kp G   &none     &kp LCTRL  &kvm1      &kp LGUI   &kp RCTRL  &none      &kp H   &kp J   &hm K LEFT_COMMAND  &hm L RIGHT_ALT  &hm SEMI RIGHT_CONTROL  &kp SQT
+&kp ESC    &hm LEFT_CONTROL A  &hm LEFT_ALT S  &hm LEFT_COMMAND D  &kp F      &kp G   &none     &kp LCTRL  &kvm1      &kp LGUI   &kp RCTRL  &none      &kp H   &kp J   &hm LEFT_COMMAND K  &hm RIGHT_ALT L  &hm RIGHT_CONTROL SEMI  &kp SQT
 &kp LSHFT  &kp Z               &kp X           &kp C               &kp V      &kp B                        &kvm2      &kp PG_UP                        &kp N   &kp M   &kp COMMA           &kp DOT          &kp FSLH                &kp RSHFT
 &mo 2      &kp GRAVE           &kp CAPS        &kp LEFT            &kp RIGHT          &kp BSPC  &kp DEL    &kvm3      &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP  &kp DOWN            &kp LBKT         &kp RBKT                &mo 2
             >;
@@ -72,11 +72,11 @@
         fn {
             display-name = "Fn";
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 1                                      &mo 3   &kp F7  &kp F8      &kp F9            &kp F10     &kp F11  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans  &trans      &kp C_VOLUME_UP   &trans      &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &trans  &kp C_PREV  &kp K_PLAY_PAUSE  &kp C_NEXT  &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans      &kp C_VOLUME_UP   &trans      &trans   &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans      &trans            &trans      &trans   &trans
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 1                                      &mo 3   &kp F7  &kp F8      &kp F9             &kp F10     &kp F11  &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans  &trans      &kp C_VOLUME_UP    &trans      &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &trans  &kp C_PREV  &kp C_PP           &kp C_NEXT  &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans      &kp C_VOLUME_DOWN  &trans      &trans   &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans      &trans             &trans      &trans   &trans
             >;
         };
 
