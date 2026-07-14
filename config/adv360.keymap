@@ -78,6 +78,13 @@
             bindings = <&kp LEFT_CONTROL &kp LEFT_CONTROL &kp NUMBER_3>;
             label = "KVM3";
         };
+
+        usb_to_current_pc: usb_to_current_pc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp LCTRL &kp U>;
+            label = "USB_TO_CURRENT_PC";
+        };
     };
 
     keymap {
@@ -86,11 +93,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2                   &kp N3               &kp N4               &kp N5  &tog 1                                          &mo 3          &kp N6  &kp N7                     &kp N8                 &kp N9                     &kp N0         &kp MINUS
-&kp TAB    &kp Q      &kp W                    &kp E                &kp R                &kp T   &none                                           &kp PG_UP      &kp Y   &kp U                      &kp I                  &kp O                      &kp P          &kp BSLH
-&kp ESC    &kp A      &hm_left LEFT_CONTROL S  &hm_left LEFT_ALT D  &hm_left LEFT_GUI F  &kp G   &sl 3     &kp F20  &kvm1      &none  &none      &kp PAGE_DOWN  &kp H   &hm_right RIGHT_COMMAND J  &hm_right RIGHT_ALT K  &hm_right RIGHT_CONTROL L  &kp SEMICOLON  &kp SQT
-&kp LSHFT  &kp Z      &kp X                    &kp C                &kp V                &kp B                      &kvm2      &none                            &kp N   &kp M                      &kp COMMA              &kp DOT                    &kp FSLH       &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS                 &kp LEFT             &kp RIGHT                    &kp BSPC  &kp DEL  &kvm3      &none  &kp ENTER  &kp SPACE              &kp UP                     &kp DOWN               &kp LBKT                   &kp RBKT       &mo 2
+&kp EQUAL  &kp N1     &kp N2                   &kp N3               &kp N4               &kp N5  &tog 1                                                  &mo 3          &kp N6  &kp N7                     &kp N8                 &kp N9                     &kp N0         &kp MINUS
+&kp TAB    &kp Q      &kp W                    &kp E                &kp R                &kp T   &none                                                   &kp PG_UP      &kp Y   &kp U                      &kp I                  &kp O                      &kp P          &kp BSLH
+&kp ESC    &kp A      &hm_left LEFT_CONTROL S  &hm_left LEFT_ALT D  &hm_left LEFT_GUI F  &kp G   &sl 3     &kp F20  &kvm1      &none          &none      &kp PAGE_DOWN  &kp H   &hm_right RIGHT_COMMAND J  &hm_right RIGHT_ALT K  &hm_right RIGHT_CONTROL L  &kp SEMICOLON  &kp SQT
+&kp LSHFT  &kp Z      &kp X                    &kp C                &kp V                &kp B                      &kvm2      &kp PG_UP                                &kp N   &kp M                      &kp COMMA              &kp DOT                    &kp FSLH       &kp RSHFT
+&mo 2      &kp GRAVE  &kp CAPS                 &kp LEFT             &kp RIGHT                    &kp BSPC  &kp DEL  &kvm3      &kp PAGE_DOWN  &kp ENTER  &kp SPACE              &kp UP                     &kp DOWN               &kp LBKT                   &kp RBKT       &mo 2
             >;
         };
 
@@ -108,11 +115,11 @@
         fn {
             display-name = "Fn";
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 1                                      &mo 3   &kp F7  &kp F8      &kp F9             &kp F10     &kp F11  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans  &trans      &kp C_VOLUME_UP    &trans      &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &trans  &kp C_PREV  &kp C_PP           &kp C_NEXT  &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans      &kp C_VOLUME_DOWN  &trans      &trans   &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &kp PG_UP   &kp PAGE_DOWN      &trans      &trans   &trans
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 1                                                  &mo 3   &kp F7  &kp F8      &kp F9             &kp F10     &kp F11  &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans  &none                                                   &none   &trans  &trans      &kp C_VOLUME_UP    &trans      &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &usb_to_current_pc      &trans  &trans  &none   &trans  &kp C_PREV  &kp C_PP           &kp C_NEXT  &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans                  &trans                  &trans  &trans      &kp C_VOLUME_DOWN  &trans      &trans   &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans                  &trans  &trans  &trans          &kp PG_UP   &kp PAGE_DOWN      &trans      &trans   &trans
             >;
         };
 
